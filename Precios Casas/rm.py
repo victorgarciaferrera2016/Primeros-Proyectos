@@ -16,6 +16,8 @@ import matplotlib.pyplot as plt
 
 #importamos la data
 boston = pd.read_csv('BostonHousing.csv')
+df = pd.read_csv('F:/Ciencia de Datos/Primeros-Proyectos/Precios Casas/Recursos/house-prices-advanced-regression-techniques/train.csv')
+
 print(boston)
 
 #imformacion del df
