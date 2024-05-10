@@ -1,0 +1,22 @@
+Mostrar el mapa de calor
+plt.show()
+Descripción:
+Se determina la matriz de correlación del dataframe que básicamente es hallar la correlación entre dos variables. Es simétrica y su diagonal principal está conformada por puros unos. Para esto se usa "matriz_corr = df_banco.corr()".
+Se crea una figura y ejes de forma explícita utilizando "plt.subplots(figsize=(12, 9))".
+Se crea el mapa utilizando "sns.heatmap(matriz_corr, annot=True, fmt='.3f', cmap='coolwarm', ax=ax, annot_kws={"size": 7})". Los argumentos utilizados son los siguientes: la matriz de correlación, annot=True para agregar sus respectivos valores, fmt='.3f' para redondear cada valor a 3 decimales, cmap='coolwarm' para darle un estilo a la escala de colores, ax=ax que son los ejes para trazarlo en el mapa de calor y annot_kws={"size": 7} que es el tamaño de la fuenta de los elementos del mapa.
+Se agrega un título con "ax.set_title('Mapa de Calor de Ejemplo')".
+Se muestra el mapa con "plt.show()".
+
+
+Interpretación:
+En el mapa de calor, se pueden resaltar dos resultados:
+Uno entre las variables "estado_civil" y "sexo" cuya correlación es -0.738, que es el valor más cercano a -1 que denota que ambas variables se aproximan a una gráfica lineal de pendiente negativa.
+Y otro entre las variables "rango_valor_credito" y "rango_plazos_credito" cuya correlación es 0.611 que es un valor cercano a 1 que denota que ambas variables se aproximan a una gráfica lineal de pendiente positiva.
+Gráfico:
+No se puede poner imágenes en el Discord así que mejor ejecútenlo ustedes 🥲 
+Rpta 3:
+"sexo": La mayoría de los clientes del banco son hombres y conforman un 69% del total.
+"estado_civil": Hay más clientes solteros que casados, cuya diferencia es ligera. La proporción es de 54.8% y 45.2% respectivamente.
+"rango_plazos_credito": Más del 90% de clientes del banco pide un crédito de no mayor a 36 meses.
+"rango_edad": Los clientes de entre 18 y 30 años son los que más piden créditos, conformando un 41.1% del total.
+"default": El 70% de los clientes del banco son buenos clientes.
